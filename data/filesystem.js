@@ -1,0 +1,4 @@
+(function(storage) {
+
+
+}(module.exports));
