@@ -40,4 +40,8 @@ describe("Book test suite", function() {
   it("has an image field", function() {
     expect(book.image).toBeDefined();
   })
+
+  it("contains the correct title", function() {
+    expect(book.title).toBe("my book");
+  })
 })

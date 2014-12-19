@@ -1,0 +1,6 @@
+div
+  ul
+    li(ng-repeat='book in books')
+      img(src = '{{ book.image }}')
+      {{ book.title }}, by {{ book.author }}
+      
