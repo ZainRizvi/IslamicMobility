@@ -1,11 +1,11 @@
 div.container
   
-  p Here are our books:
+  p.h2 The Library
   
   div.col-md-3.col-sm-4(ng-repeat='book in books')
     div.row
       div
-        img(src = '{{ book.image }}')
+        img.img-responsive.img-rounded(src = '{{ book.image }}')
       div
         p {{ book.title }}
         p by {{ book.author }}
