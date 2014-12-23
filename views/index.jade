@@ -1,10 +1,14 @@
 ﻿extends layout
 
 block content
+  
+  div.navbar.navbar-default
+    div.container-fluid
+      div.page-header
+        h1= title
+        h4 Welcome to #{title}
+        
   div.container
-    div.page-header
-      h1= title
-      h4 Welcome to #{title}
     
     //-
     //-  ul
