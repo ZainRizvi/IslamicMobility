@@ -1,5 +1,9 @@
-div
-  div.col-sm-3(ng-repeat='book in books')
+div.container
+  
+  p Here are our books:
+  
+  div.col-md-3.col-sm-4(ng-repeat='book in books')
+    div.row
       div
         img(src = '{{ book.image }}')
       div
