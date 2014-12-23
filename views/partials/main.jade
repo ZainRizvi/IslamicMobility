@@ -1,6 +1,8 @@
 div
-  ul
-    li(ng-repeat='book in books')
-      img(src = '{{ book.image }}')
-      {{ book.title }}, by {{ book.author }}
+  div.col-sm-3(ng-repeat='book in books')
+      div
+        img(src = '{{ book.image }}')
+      div
+        p {{ book.title }}
+        p by {{ book.author }}
       

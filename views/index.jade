@@ -1,16 +1,19 @@
 ﻿extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    div.page-header
+      h1= title
+      h4 Welcome to #{title}
 
-  p Here are our books:
+    p Here are our books:
+    
+    //-
+    //-  ul
+    //-    each book in books
+    //-        li #{book.title}, by #{book.author}
 
-  //-  ul
-  //-    each book in books
-  //-        li #{book.title}, by #{book.author}
-
-  div(ng-view)
+    div(ng-view)
 
 block scripts
   script(src='/js/app.js')
