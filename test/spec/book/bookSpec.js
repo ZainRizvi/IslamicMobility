@@ -10,6 +10,7 @@ describe("Book test suite", function() {
         pdf: "book.pdf",
         mobi: "book.mobi",
         image: "book.png",
+        description: "This is a cool book"
       });
   })
 
@@ -39,6 +40,10 @@ describe("Book test suite", function() {
 
   it("has an image field", function() {
     expect(book.image).toBeDefined();
+  })
+
+  it("has an description field", function() {
+    expect(book.description).toBeDefined();
   })
 
   it("contains the correct title", function() {

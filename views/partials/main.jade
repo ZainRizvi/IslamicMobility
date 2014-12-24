@@ -2,11 +2,23 @@ div.container
   
   p.h2 The Library
   
-  div.col-md-3.col-sm-4(ng-repeat='book in books')
-    div.row
-      div
-        img.img-responsive.img-rounded(src = '{{ book.image }}')
-      div
-        p {{ book.title }}
-        p by {{ book.author }}
-      
+  div.row
+    div(ng-repeat='book in books')
+      div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
+      div.col-md-6
+        div.row
+          div.col-sm-4
+            img.img-responsive.img-rounded(src = '{{ book.image }}')
+          div.col-sm-8
+            strong {{ book.title }}
+            p by {{ book.author }}
+            p {{ book.description }} 
+            
+            ul.list-inline
+              li Download:
+              li 
+                a(ng-href='{{ book.epub }}') epub
+              li 
+                a(ng-href='{{ book.mobi }}') mobi
+              li 
+                a(ng-href='{{ book.pdf }}') pdf

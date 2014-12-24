@@ -9,6 +9,9 @@
     this.author = author;
 
     if (props) {
+      if (props.description) {
+        this.description = props.description
+      }
       if (props.image) {
         this.image = props.image
       }
