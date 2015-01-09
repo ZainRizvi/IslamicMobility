@@ -5,6 +5,7 @@ div.container
   div.row
     div(ng-repeat='book in books')
       div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
+      div.clearfix.visible-lg-block(ng-if='$index % 2 == 0')
       div.col-md-6
         div.row
           div.col-sm-4
