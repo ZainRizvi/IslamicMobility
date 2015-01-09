@@ -5,6 +5,7 @@ div.container
   div.row
     div(ng-repeat='book in books')
       div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
+      div.clearfix.visible-lg-block(ng-if='$index % 2 == 0')
       div.col-md-6
         div.row
           div.col-sm-4
@@ -16,9 +17,9 @@ div.container
             
             ul.list-inline
               li Download:
-              li 
+              li(ng-if='book.epub')
                 a(ng-href='{{ book.epub }}') epub
-              li 
+              li(ng-if='book.mobi')
                 a(ng-href='{{ book.mobi }}') mobi
-              li 
+              li(ng-if='book.pdf')
                 a(ng-href='{{ book.pdf }}') pdf

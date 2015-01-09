@@ -1,10 +1,10 @@
 ﻿(function (data) {
 
-    var database = require("./filesystem");
+    var filesystem = require("./filesystem");
     var seed = require("./seeddata");
 
     data.getBooks = function(next) {
-      next(null, seed.data);
+      next(null, filesystem.data);
     }
 
 }(module.exports));
