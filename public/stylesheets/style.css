@@ -5,3 +5,6 @@ body {
 a {
   color: #00b7ff;
 }
+.top-buffer {
+  margin-top: 20px;
+}
