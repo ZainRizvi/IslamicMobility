@@ -13,7 +13,8 @@ div.container
           div.col-sm-8
             strong {{ book.title }}
             p by {{ book.author }}
-            p {{ book.description }} 
+            //- Using both description and summary so that if either of the two is defined it'll show up 
+            p {{ book.description }} {{ book.summary }}  
             
             ul.list-inline
               li Download:
