@@ -2,7 +2,7 @@ div.container
   
   p.h2 The Library
   
-  div.row
+  div.row(infinite-scroll='loadMoreBooks()' infinite-scroll-disabled='infiniteScrollTriggerDisabled' infinite-scroll-distance='infiniteScrollDistance')
     div(ng-repeat='book in books')
       div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
       div.clearfix.visible-lg-block(ng-if='$index % 2 == 0')

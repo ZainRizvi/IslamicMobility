@@ -1,6 +1,6 @@
 (function() {
 
-  var app = angular.module('islamicMobility', ["ngRoute"]);
+  var app = angular.module('islamicMobility', ["ngRoute", "infinite-scroll"]);
 
   app.config(function($routeProvider) {
     $routeProvider
