@@ -49,6 +49,8 @@
 
       $scope.searchForBooks = function() {
 
+        $scope.noSearchResultsFound = false;
+
         if (!$scope.search) {
           resetGetBooks();
           getBooks();
@@ -60,6 +62,9 @@
         $http.get('/api/books/search/' + $scope.search)
           .then(function(response) {
             $scope.books = response.data;
+            if (!$scope.books || $scope.books.length == 0) {
+              $scope.noSearchResultsFound = true;
+            }
           });
       }
     }
