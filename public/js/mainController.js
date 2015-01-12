@@ -19,6 +19,11 @@
 
       var booksToLoadPerRequest = 4;
 
+      var resetGetBooks = function() {
+        $scope.infiniteScrollTriggerDisabled = false;
+        $scope.books = [];
+        $scope.currentBookLoadIndex = 0;
+      }
 
       var getBooks = function() {
         $scope.infiniteScrollTriggerDisabled = true;
@@ -42,10 +47,21 @@
         getBooks();
       }
 
-//      getBooks();
+      $scope.searchForBooks = function() {
 
-  //    $scope.infiniteScrollTriggerDisabled = false;
+        if (!$scope.search) {
+          resetGetBooks();
+          getBooks();
+          return;
+        }
+
+        $scope.infiniteScrollTriggerDisabled = true; // no infinite scrolling once we start searching
+
+        $http.get('/api/books/search/' + $scope.search)
+          .then(function(response) {
+            $scope.books = response.data;
+          });
+      }
     }
-    ]);
-
-  }(window.angular));
+  ]);
+}(window.angular));

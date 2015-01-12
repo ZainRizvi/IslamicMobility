@@ -2,6 +2,11 @@ div.container
   
   p.h2 The Library
   
+  form.form-inline(ng-submit="searchForBooks()")
+    div.form-group
+      input.form-control(type='text', ng-model='search', name='search', placeholder="Search")
+      button.btn.btn-default(type="submit") Search
+  
   div.row(infinite-scroll='loadMoreBooks()' infinite-scroll-disabled='infiniteScrollTriggerDisabled' infinite-scroll-distance='infiniteScrollDistance')
     div(ng-repeat='book in books')
       div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
