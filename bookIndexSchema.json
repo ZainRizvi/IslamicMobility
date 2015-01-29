@@ -1,0 +1,91 @@
+{
+  "@odata.context": "https://islamicmobility.search.windows.net/$metadata#indexes/$entity",
+  "name": "books",
+  "fields":[{
+    "name":"id",
+    "type":"Edm.String",
+    "searchable":false,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":true
+  }, {
+    "name":"title",
+    "type":"Edm.String",
+    "searchable":true,
+    "filterable":true,
+    "retrievable":true,
+    "sortable":true,
+    "facetable":true,
+    "suggestions":true,
+    "key":false
+  }, {
+    "name":"author",
+    "type":"Edm.String",
+    "searchable":true,
+    "filterable":true,
+    "retrievable":true,
+    "sortable":true,
+    "facetable":false,
+    "suggestions":true,
+    "key":false
+  }, {
+    "name":"description",
+    "type":"Edm.String",
+    "searchable":true,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":false
+  }, {
+    "name":"epub",
+    "type":"Edm.String",
+    "searchable":false,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":false
+  }, {
+    "name":"pdf",
+    "type":"Edm.String",
+    "searchable":false,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":false
+  }, {
+    "name":"mobi",
+    "type":"Edm.String",
+    "searchable":false,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":false
+  }, {
+    "name":"image",
+    "type":"Edm.String",
+    "searchable":false,
+    "filterable":false,
+    "retrievable":true,
+    "sortable":false,
+    "facetable":false,
+    "suggestions":false,
+    "key":false
+  }],
+  "scoringProfiles":[],
+  "defaultScoringProfile":"",
+  "corsOptions":{
+    "allowedOrigins":["*"],
+    "maxAgeInSeconds":300
+  }
+}
