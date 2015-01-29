@@ -7,6 +7,11 @@ var client = AzureSearch({
 });
 
 /*
+client.getIndex("books", function(err, index) {
+  if (err) console.log(err);
+  console.log(index);
+});
+*/
 
 var data = require("./data/filesystem")
 var books = data.data;
@@ -16,6 +21,8 @@ _.each(books, function(book) {
     ;
 });
 
+
+/*
 client.addDocuments('books', books, function(err, confirmation){
   if (err) console.log(err);
   console.log ("All done");
@@ -44,5 +51,19 @@ client.search('books', {search:'woman'}, function(err, results){
   // results is an array of matching documents
 });
 
+
+/*
+var index = require("./bookIndexSchema.json");
+console.log(index);
+
+client.deleteIndex("books", function(err, data) {
+  if (err) console.log(err);
+  console.log("Index deleted")
+  client.createIndex(index, function(err, data) {
+    if(err) console.log(err);
+    console.log("created index");
+  })
+})
+*/
 
 console.log("And now we wait...");
