@@ -11,11 +11,12 @@ div.container
     div(ng-repeat='book in books')
       div.clearfix.visible-md-block(ng-if='$index % 2 == 0')
       div.clearfix.visible-lg-block(ng-if='$index % 2 == 0')
-      div.col-md-6.top-buffer
+      div.clearfix.visible-sm-block(ng-if='$index % 2 == 0')
+      div.col-sm-6.top-buffer
         div.row
-          div.col-sm-4
+          div.col-xs-4
             img.img-responsive(src = '{{ book.image }}')
-          div.col-sm-8
+          div.col-xs-8
             strong {{ book.title }}
             p by {{ book.author }}
             p {{ book.description }} 
