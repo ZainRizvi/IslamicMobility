@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
@@ -7,4 +6,15 @@ a {
 }
 .top-buffer {
   margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .container-fluid,
+  .row {
+    padding: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .navbar-header {
+    margin: 0px;
+  }
 }
